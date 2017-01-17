@@ -1,0 +1,12 @@
+#stand{
+ width:100%;
+    margin:0 auto;
+}
+
+.box{
+	float:left;
+	width:48%;
+	margin: 0 auto;
+	height: width;
+	background:white;
+}

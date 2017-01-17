@@ -1,0 +1,123 @@
+
+<html>
+<head><title>Graphing</title>
+<link rel="stylesheet" href="style.css">
+<script src="Chart.bundle.min.js"></script>
+
+</head>
+<body style = "background-color:gray;">
+
+<h1 style = "text-align:center">Paly Graduates</h1>
+
+<div id = "stand">
+	<div class = "box">
+	<h2 style = "text-align:center">Harvard Applicants<h2>
+		<canvas id="myChart" width="400" height="400"></canvas>
+		<script>
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx,{
+			maintainAspectRatio: true,
+
+		    type: 'bar',
+		    data: {
+		        labels: ["2016", "2015", "2014"],
+				datasets: [{	
+					label: "Denied",
+					data: [59, 40, 31],
+					backgroundColor: ["rgba(20,68,140,1)",
+									"rgba(123, 11, 139,1)",
+									"rgba(208, 13, 23,1)",]
+									,
+				    borderColor: ["rgba(20, 57, 112,1)",
+									"rgba(100, 13, 112,1)",
+									"rgba(167, 16, 24,1)"],
+				    borderWidth: 1,
+				}, {
+				   	label: "Accepted",
+				    data: [1,2,5],
+				    backgroundColor: ["rgba(8, 135, 110,1)",
+									"rgba(212, 75, 13,1)",
+									"rgba(212, 150, 13,1)"],
+				    borderColor: ["rgba(10, 109, 90,1)",
+									"rgba(170, 64, 16,1)",
+									"rgba(170, 123, 16,1)"],
+				    borderWidth: 1
+
+				}]
+		   	},
+		    options: {
+		    	
+		        scales: {
+
+		        	yAxes: [{
+		            	stacked: true,
+		            	suggestedMin: 0
+		            }],
+		        	xAxes:[{
+		        		stacked: true,
+		        		beginAtZero: true,
+		        		suggestedMin: 0
+		        	}]
+		           
+		        }
+		    }
+
+		});
+
+		</script>
+
+
+	</div>
+	<div class = "box">
+	<h2 style = "text-align:center">Stanford Applicants<h2>
+	<canvas id="myChart2" width="400" height="400"></canvas>
+	<script>
+		
+		
+		var ctx = document.getElementById("myChart2");
+		var myChart2 = new Chart(ctx,{
+		    type: 'bar',
+		    data: {
+		        labels: ["2016", "2015", "2014"],
+				datasets: [{	
+					label: "Denied",
+					data: [99, 99, 88],
+					backgroundColor: ["rgba(20,68,140,1)",
+									"rgba(123, 11, 139,1)",
+									"rgba(208, 13, 23,1)",]
+									,
+				    borderColor: ["rgba(20, 57, 112,1)",
+									"rgba(100, 13, 112,1)",
+									"rgba(167, 16, 24,1)"],
+				    borderWidth: 1
+				}, {
+				   	label: "Accepted",
+				    data: [14,14,17],
+				    backgroundColor: ["rgba(8, 135, 110,1)",
+									"rgba(212, 75, 13,1)",
+									"rgba(212, 150, 13,1)"],
+				    borderColor: ["rgba(10, 109, 90,1)",
+									"rgba(170, 64, 16,1)",
+									"rgba(170, 123, 16,1)"],
+				    borderWidth: 1
+				}]
+		   	},
+		    options: {
+		        scales: {
+		        	yAxes: [{
+		            	stacked: true,
+		            }],
+		        	xAxes:[{
+		        		stacked: true,
+		        	}]
+		           
+		        }
+		    }
+
+		});
+
+	</script>
+	</div>
+</div>
+</body>
+</html>
