@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="chartBuilder.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -16,55 +17,39 @@
 
 
 </head>
-<body>
+<body onload="ivyGraph('Harvard University', 32, 41, 60, 5, 2, 1); stanfordGraph()">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Site Name</a>
+    </div>
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Home</a></li>
+    <li class="dropdown">
+      <a class ="dropdown-toggle" data-toggle="dropdown" href="#">Ivy League Schools
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a onClick="ivyGraph('Harvard University', 32, 41, 60, 5, 2, 1)">Harvard University</a></li>
+        <li><a onClick="ivyGraph('Yale University', 44, 46, 51, 3, 2, 3);">Yale University</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Other Universites</a></li>
+  </ul>
+</div>
+</nav>
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-6">
-		   <canvas id="myChart"></canvas>
+      <h1 style="text-align:center;" id="ivyName"></h1>
+		  <canvas id="myChart"></canvas>
 		</div>
 		<div class="col-sm-6">
+      <h1 style="text-align:center;">Stanford University</h1> 
 			<canvas id="secondChart"><canvas>
 		</div>
 	</div>
 </div>
-
-<script>
-var ctx = document.getElementById("myChart").getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    datasets: [{
-      label: 'apples',
-      data: [12, 19, 3, 17, 28, 24, 7],
-      backgroundColor: "rgba(153,255,51,1)"
-    }, {
-      label: 'oranges',
-      data: [30, 29, 5, 5, 20, 3, 10],
-      backgroundColor: "rgba(255,153,0,1)"
-    }]
-  }
-});
-</script>
-
-<script>
-var ctx = document.getElementById("secondChart").getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    datasets: [{
-      label: 'pears',
-      data: [12, 19, 3, 17, 28, 24, 7],
-      backgroundColor: "rgba(0,255,51,1)"
-    }, {
-      label: 'bannanas',
-      data: [30, 29, 5, 5, 20, 3, 10],
-      backgroundColor: "rgba(255,0,180,1)"
-    }]
-  }
-});
-</script>
 
 <div class="container-fluid">
 	<div class="row">
