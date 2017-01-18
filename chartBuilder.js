@@ -32,11 +32,11 @@ function ivyGraph(name, t1, t2, t3, a1, a2, a3) {
     data: {
       labels: ["2014", "2015", "2016"],
       datasets: [{
-        label: 'pears',
+        label: 'Total Applicants',
         data: [t1, t2, t3],
         backgroundColor: "rgba(0,255,51,1)"
       }, {
-        label: 'bannanas',
+        label: 'Admitted Students',
         data: [a1, a2, a3],
         backgroundColor: "rgba(255,0,180,1)"
       }]
@@ -51,11 +51,11 @@ function stanfordGraph() {
     data: {
       labels: ["2014", "2015", "2016"],
       datasets: [{
-        label: 'pears',
+        label: 'Total Applicants',
         data: [32, 41, 60],
         backgroundColor: "rgba(0,255,51,1)"
       }, {
-        label: 'bannanas',
+        label: 'Admitted Students',
         data: [5,2, 1],
         backgroundColor: "rgba(255,0,180,1)"
       }]
