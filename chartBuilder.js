@@ -1,30 +1,7 @@
-// function harvardGraph() {
-//   var ctx = document.getElementById("secondChart").getContext('2d');
-//   var myChart = new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-//       labels: ["2014", "2015", "2016"],
-//       datasets: [{
-//         label: 'Total Applicants',
-//         data: [88, 95, 99],
-//         backgroundColor: "rgba(153,255,51,1)"
-//       }, {
-//         label: 'Students accepted',
-//         data: [17, 14, 14],
-//         backgroundColor: "rgba(255,153,0,1)"
-//       }]
-//     }
-//   });
-// };
-
-function ivyGraph(name, t1, t2, t3, a1, a2, a3) {
-  var name = name
-  var t1 = t1
-  var t2 = t2
-  var t3 = t3
-  var a1 = a1
-  var a2 = a2
-  var a3 = a3
+function iGraph(name, app, adm) {
+  var name = name;
+  $('#myChart').remove();
+  $('#ivyGraph').append(' <canvas id="myChart"></canvas>');
   document.getElementById("ivyName").innerHTML = name;
   var ctx = document.getElementById("myChart").getContext('2d');
   var myChart = new Chart(ctx, {
@@ -33,30 +10,58 @@ function ivyGraph(name, t1, t2, t3, a1, a2, a3) {
       labels: ["2014", "2015", "2016"],
       datasets: [{
         label: 'Total Applicants',
-        data: [t1, t2, t3],
+        data: [app[0], app[1], app[2]],
         backgroundColor: "rgba(0,255,51,1)"
       }, {
         label: 'Admitted Students',
-        data: [a1, a2, a3],
+        data: [adm[0], adm[1], adm[2]],
         backgroundColor: "rgba(255,0,180,1)"
       }]
     }
   });
+
 };
 
-function stanfordGraph() {
-  var ctx = document.getElementById("secondChart").getContext('2d');
+function uGraph(name, app, adm) {
+  var name = name;
+  $('#myChart3').remove();
+  $('#UCGraph').append(' <canvas id="myChart2"></canvas>');
+  document.getElementById("UCName").innerHTML = name;
+  var ctx = document.getElementById("myChart2").getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: ["2014", "2015", "2016"],
       datasets: [{
         label: 'Total Applicants',
-        data: [32, 41, 60],
+        data: [app[0], app[1], app[2]],
         backgroundColor: "rgba(0,255,51,1)"
       }, {
         label: 'Admitted Students',
-        data: [5,2, 1],
+        data: [adm[0], adm[1], adm[2]],
+        backgroundColor: "rgba(255,0,180,1)"
+      }]
+    }
+  });
+};
+
+function oGraph(name, app, adm) {
+  var name = name;
+  $('#myChart3').remove();
+  $('#oGraph').append(' <canvas id="myChart3"></canvas>');
+  document.getElementById("oName").innerHTML = name;
+  var ctx = document.getElementById("myChart3").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["2014", "2015", "2016"],
+      datasets: [{
+        label: 'Total Applicants',
+        data: [app[0], app[1], app[2]],
+        backgroundColor: "rgba(0,255,51,1)"
+      }, {
+        label: 'Admitted Students',
+        data: [adm[0], adm[1], adm[2]],
         backgroundColor: "rgba(255,0,180,1)"
       }]
     }

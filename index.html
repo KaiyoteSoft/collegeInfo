@@ -1,66 +1,97 @@
-<!DOCTYPE html> 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Graphing</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="chartBuilder.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Graphing</title>
+
+
+<!-- bootstrap/js requirements-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script type="text/javascript" src="chartBuilder.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="style.css">
 <script src="Chart.bundle.min.js"></script>
 
-
 </head>
-<body onload="ivyGraph('Harvard University', 32, 41, 60, 5, 2, 1); stanfordGraph()">
+
+<body onload="iGraph('Harvard University', [32, 41, 60], [5, 2, 1]); uGraph('UCLA', [199,	193,	198],	[46,	32,	33], 'myChart2'); oGraph('University of Michigan',[113,	113,	82],	[49,	40,	34])">
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Site Name</a>
-    </div>
-  <ul class="nav navbar-nav">
-    <li class="active"><a href="#">Home</a></li>
-    <li class="dropdown">
-      <a class ="dropdown-toggle" data-toggle="dropdown" href="#">Ivy League Schools
-      <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a onClick="ivyGraph('Harvard University', 32, 41, 60, 5, 2, 1)">Harvard University</a></li>
-        <li><a onClick="ivyGraph('Yale University', 44, 46, 51, 3, 2, 3);">Yale University</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Other Universites</a></li>
-  </ul>
-</div>
-</nav>
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-6">
-      <h1 style="text-align:center;" id="ivyName"></h1>
-		  <canvas id="myChart"></canvas>
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class ="navbar-brand" href = "#">College Info.</a>
 		</div>
-		<div class="col-sm-6">
-      <h1 style="text-align:center;">Stanford University</h1> 
-			<canvas id="secondChart"><canvas>
+		<ul class = "nav navbar-nav">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ivy League Universities<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				<!-- Mutable list of all Ivys-->
+					<li><a onClick = "iGraph('Harvard University', [60, 41, 32], [1,2,5])">Harvard University</a></li>
+					
+					<li><a onClick = "iGraph('Yale University', [51,46,44], [3,2,3])">Yale University</a></li>
+					
+					<li><a onClick = "iGraph('Cornell University', [63,	52,	37], [8, 13, 3])">Cornell University</a></li>
+					
+					<li><a onClick = "iGraph('Columbia University'), [80,	54,	28], [6,6,5]">Columbia University</a></li>
+					
+					<li><a onClick = "iGraph('University of Pennsylvania', [54,	45,	28], [2,3,2])">University of Pennsylvania</a></li>
+					
+					<li><a onClick = "iGraph('Brown University', [80,	60,	40],[8,	4,	6])">Brown University</a></li>
+					
+					<li><a onClick = "iGraph('Princeton University', [53,	48,	37],[4,	4,	3])">Princeton University</a></li>
+					
+					<li><a onClick = "iGraph('Dartmouth College', [31,	40,	26],[3,	2,	6])">Dartmouth College</a></li>
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">University of California Schools<span class "caret"></span></a>
+				<ul class = "dropdown-menu">
+					<li><a onClick = "uGraph('UCLA', [199,	193,	198],	[46,	32,	33], 'myChart2')">UCLA</a></li>
+					<li><a onClick = "uGraph('UCSD', [187,	202,	186],	[67,	66,	72])">UCSD</a></li>
+					<li><a onClick = "uGraph('UC Berkeley', [179,	171,	173],	[58,	33,	27])">UC Berkeley</a></li>
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Other Colleges<span class "caret"></span></a>
+				<ul class = "dropdown-menu">
+					<li><a onClick = "oGraph('Stanford',[99,	95,	88],	[14,	14,	17])">Stanford</a></li>
+
+					<li><a onClick = "oGraph('University of Michigan',[113,	113,	82],	[49,	40,	34])">University of Michigan</a></li>
+
+					<li><a onClick = "oGraph('Vanderbilt University',	[37,	31,	31],	[5,	4,	2])">Vanderbilt University</a></li>
+
+					<li><a onClick = "oGraph('Tulane',	[41,	14,	28],	[14,	9,	11])">Tulane</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class ="row">
+			<div class="col-sm-6" id="ivyGraph">
+		<h1 style = "text-align:center;" id="ivyName"></h1>
+			<canvas id = "myChart"></canvas>
+			</div>
+			<div class="col-sm-6" id="UCGraph">
+		<h1 style = "text-align:center;" id="UCName"></h1>
+			<canvas id = "myChart2"></canvas>
+			</div>
+		<div class="row">
+			<div class="col-sm-6" id="oGraph">
+		<h1 style = "text-align:center;" id="oName"></h1>
+			<canvas id = "myChart3"></canvas>
+			</div>
+		</div>
 		</div>
 	</div>
-</div>
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-6" style="background-color:yellow">
-			<p>Hello</p>
-		</div>
-		<div class="col-sm-6" style="background-color:red">
-			<p>Goodbye</p>
-		</div>
-	</div>
-</div>
 
 </body>
 </html>
