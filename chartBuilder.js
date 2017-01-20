@@ -24,7 +24,7 @@ function iGraph(name, app, adm) {
 
 function uGraph(name, app, adm) {
   var name = name;
-  $('#myChart3').remove();
+  $('#myChart2').remove();
   $('#UCGraph').append(' <canvas id="myChart2"></canvas>');
   document.getElementById("UCName").innerHTML = name;
   var ctx = document.getElementById("myChart2").getContext('2d');
