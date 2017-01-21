@@ -11,11 +11,11 @@ function iGraph(name, app, adm) {
       datasets: [{
         label: 'Total Applicants',
         data: [app[0], app[1], app[2]],
-        backgroundColor: "rgba(0,255,51,1)"
+        backgroundColor: "rgba(145,61,100,1)"
       }, {
         label: 'Admitted Students',
         data: [adm[0], adm[1], adm[2]],
-        backgroundColor: "rgba(255,0,180,1)"
+        backgroundColor: "rgba(78,132,204,1)"
       }]
     }
   });
@@ -35,11 +35,11 @@ function uGraph(name, app, adm) {
       datasets: [{
         label: 'Total Applicants',
         data: [app[0], app[1], app[2]],
-        backgroundColor: "rgba(0,255,51,1)"
+        backgroundColor: "rgba(106,180,255,1)"
       }, {
         label: 'Admitted Students',
         data: [adm[0], adm[1], adm[2]],
-        backgroundColor: "rgba(255,0,180,1)"
+        backgroundColor: "rgba(255,187,33,1)"
       }]
     }
   });
@@ -58,11 +58,11 @@ function oGraph(name, app, adm) {
       datasets: [{
         label: 'Total Applicants',
         data: [app[0], app[1], app[2]],
-        backgroundColor: "rgba(0,255,51,1)"
+        backgroundColor: "rgba(105,204,97,1)"
       }, {
         label: 'Admitted Students',
         data: [adm[0], adm[1], adm[2]],
-        backgroundColor: "rgba(255,0,180,1)"
+        backgroundColor: "rgba(255,160,147,1)"
       }]
     }
   });
