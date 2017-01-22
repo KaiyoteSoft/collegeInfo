@@ -1,9 +1,20 @@
 body {
-	padding-top: 70px;
+	padding-top: 50px;
 }
 
 li {
 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#siteTitle{
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+
+#siteDescription {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 110%; 
+	text-align: center;
 }
 
 #ivyName, #UCName, #oName {
