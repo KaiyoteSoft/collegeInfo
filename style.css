@@ -1,3 +1,15 @@
+body {
+	padding-top: 70px;
+}
+
+li {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#ivyName, #UCName, #oName {
+	font-family: 'Oswald', sans-serif;
+}
+
 #stand{
  width:100%;
     margin:0 auto;
