@@ -3,6 +3,7 @@
 <head>
 
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Graphing</title>
@@ -20,10 +21,10 @@
 
 </head>
 <!--Put values in order 2016, 2015, 2014 and they will be converted to 2014 2015 2016-->
-<body onload="iGraph('Harvard University', [60, 41, 32], [1, 2, 5]); uGraph('UC Berkeley',	[179,	171,	173],	[58,	33,	27]); oGraph('University of Michigan',	[113,	113,	82],	[49,	40,	34])">
+<body onload="iGraph('Harvard University', [60, 41, 32], [1, 2, 5]); uGraph('UC Berkeley',	[179,	171,	173],	[58,	33,	27]); oGraph('CalPoly University',	[112,	116,	89],	[34,	41,	30]); o2Graph('University of Michigan',[113,	113,	82],	[49,	40,	34])">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -35,8 +36,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
 			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown">Ivy League Universities<span class="caret"></span></a>
-				<ul class="dropdown-menu">
+				<a class="dropdown-toggle" data-toggle="dropdown" role ="button">Ivy League Universities<span class="caret"></span></a>
+				<ul class="dropdown-menu" role ="menu">
 
 					<li><a onClick = "iGraph('Brown University', [80,	60,	40],[8,	4,	6])">Brown University</a></li>
 
@@ -56,47 +57,72 @@
 				</ul>
 			</li>
 			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown">University of California Schools<span class="caret"></span></a>
-				<ul class="dropdown-menu">
+				<a class="dropdown-toggle" data-toggle="dropdown" role="button">University of California Schools<span class="caret"></span></a>
+				<ul class="dropdown-menu" role = "menu">
 					<li><a onClick = "uGraph('UC Berkeley', [179,	171,	173],	[58,	33,	27])">UC Berkeley</a></li>
 				
 					<li><a onClick = "uGraph('UC Davis', [195,	182,	184],	[81,	60,	87])">UC Davis</a></li>
 				
 					<li><a onClick = "uGraph('UC Irvine', [124,	128,	103],	[55,	45,	44])">UC Irvine</a></li>
-				
+					
+					<li><a onClick = "uGraph('UC Los Angeles',	[199,	193,	198],	[46,	32,	33])">UC Los Angeles</a></li>
+
+					<li><a onClick = "uGraph('UC Merced', [39,	34,	24],	[19,	24,	18])">UC Merced</a></li>
+
+					<li><a onClick = "uGraph('UC Riverside', [75,	60,	38],	[46,	37,	30])">UC Riverside</a></li>
+
+					<li><a onClick = "uGraph('UC San Diego',	[187,	202,	186],	[67,	66,	72])">UC San Diego</a></li>
+
 					<li><a onClick = "uGraph('UC Santa Barbra', [194,	180,	173],	[91,	73,	86])">UC Santa Barbra</a></li>
 				
 					<li><a onClick = "uGraph('UC Santa Cruz', [156,	140,	111],	[87,	85,	66])">UC Santa Cruz</a></li>
-				
-					<li><a onClick = "uGraph('UC Los Angeles',	[199,	193,	198],	[46,	32,	33])">UC Los Angeles</a></li>
-					<li><a onClick = "uGraph('UC San Diego',	[187,	202,	186],	[67,	66,	72])">UC San Diego</a></li>
 				</ul>
 					
 			</li>
 			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown">Other colleges<span class="caret"></span></a>
-				<ul class="dropdown-menu">
+				<a class="dropdown-toggle" data-toggle="dropdown" role = "button">Other colleges A-N<span class="caret"></span></a>
+				<ul class="dropdown-menu" role = "menu">
 
 					<li><a href="#oName" onClick = "oGraph('Boston University',	[74,	66,	52],	[29,	28,	21])">Boston University</a></li>
+
+					<li><a href="#oName" onClick = "oGraph('CalPoly University',	[112,	116,	89],	[34,	41,	30])">CalPoly University University</a></li>
+
+					<li><a href="#oName" onClick = "oGraph('Carnegie Mellon',	[55,	61,	45],	[17,	24,	16])">Carnegie Mellon University</a></li>
+
+					<li><a href="#oName" onClick = "oGraph('Chapman University',	[52,	54,	30],	[28,	32,	17])">Chapman University</a></li>
+
+					<li><a href="#oName" onClick = "oGraph('Claremont McKenna University',	[29, 35, 25],	[3,	2,	2])">Claremont McKenna University</a></li>
+
+					<li><a href="#oName" onClick = "oGraph('Foothill College',	[42,	48,	65],	[42,	45,	65])">Foothill College</a></li>
 
 					<li><a href="#oName" onClick = "oGraph('New York University',	[74,	60,	59],	[34,	30,	30])">New York University</a></li>
 
 					<li><a href="#oName" onClick = "oGraph('Northwestern University',	[82,	78,	55],	[5,	7,	7])">Northwestern University</a></li>
 
-					<li><a href="#oName" onClick = "oGraph('Stanford University',	[99,	95,	88],	[17,	14,	14])">Stanford University</a></li>
 
-					<li><a href="#oName" onClick = "oGraph('Tufts University',	[58,	58,	44],	[9,	15,	4])">Tufts University</a></li>
+					
+				</ul>
+			</li> 
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" role = "button">Other colleges M-Z<span class="caret"></span></a>
+				<ul class="dropdown-menu" role = "menu">
 
-					<li><a href="#oName" onClick = "oGraph('Tulane University',	[41,	14,	28],	[14,	9,	11])">Tulane University</a></li>
+					<li><a href="#oName" onClick = "o2Graph('University of Michigan',[113,	113,	82],	[49,	40,	34])">University of Michigan</a></li>
 
-					<li><a href="#oName" onClick = "oGraph('University of Michigan',[113,	113,	82],	[49,	40,	34])">University of Michigan</a></li>
+					<li><a href="#oName" onClick = "o2Graph('University of Oregon',	[79,	54,	56],	[58,	41,	45])">University of Oregon</a></li>
 
-					<li><a href="#oName" onClick = "oGraph('University of Oregon',	[79,	54,	56],	[58,	41,	45])">University of Oregon</a></li>
+					<li><a href="#oName" onClick = "o2Graph('University of Southern California',[128,	127,	103],	[28,	33,	30])">University of Southern California</a></li>
 
-					<li><a href="#oName" onClick = "oGraph('University of Washington',	[127,	82,	65],	[64,	47,	37])">University of Washington</a></li>
+					<li><a href="#oName" onClick = "o2Graph('Stanford University',	[99,	95,	88],	[17,	14,	14])">Stanford University</a></li>
 
-					<li><a href="#oName" onClick = "oGraph('Vanderbilt University',	[37,	31,	31],	[5,	4,	2])">Vanderbilt University</a></li>
 
+					<li><a href="#oName" onClick = "o2Graph('Tufts University',	[58,	58,	44],	[9,	15,	4])">Tufts University</a></li>
+
+					<li><a href="#oName" onClick = "o2Graph('Tulane University',	[41,	14,	28],	[14,	9,	11])">Tulane University</a></li>
+
+					<li><a href="#oName" onClick = "o2Graph('Vanderbilt University',	[37,	31,	31],	[5,	4,	2])">Vanderbilt University</a></li>
+
+					<li><a href="#oName" onClick = "o2Graph('University of Washington',	[127,	82,	65],	[64,	47,	37])">University of Washington</a></li>
 					
 				</ul>
 			</li> 
@@ -119,15 +145,21 @@
 		<h2 style = "text-align:center;" id="UCName"></h2>
 			<canvas id = "myChart2"></canvas>
 			</div>
+		
+
 			<div class="col-sm-3"></div>
+		</div> 
+		<div class="row">
 			<div class="col-sm-6" id="oGraph">
 		<h2 style = "text-align:center;" id="oName"></h2>
 			<canvas id = "myChart3"></canvas>
 			</div>
+			<div class="col-sm-6" id="o2Graph">
+		<h2 style = "text-align:center;" id="o2Name"></h2>
+			<canvas id = "myChart4"></canvas>
+			</div>
 			<div class="col-sm-3"></div>
 		</div>
 	</div>
-
-
 </body>
 </html>

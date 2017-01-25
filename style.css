@@ -17,7 +17,7 @@ li {
 	text-align: center;
 }
 
-#ivyName, #UCName, #oName {
+#ivyName, #UCName, #oName, #o2Name{
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -32,4 +32,8 @@ li {
 	margin: 0 auto;
 	height: width;
 	background:white;
+}
+
+.dropdown-backdrop {
+    position: static;
 }
